@@ -1,8 +1,8 @@
-#AspenTech Assignment
-###Usage:
+# AspenTech Assignment
+### Usage:
 <code> python delete_folders.py -d \<days\> -p \<path\> </code>
 
-###Arguments:
+### Arguments:
 <ul>
   <li> -h, --help </li>
   <li> -d &ltdays&gt, --days=&ltdays&gt</li>
