@@ -50,14 +50,10 @@ def delete_folders(days, path):
     try:
         #Walks through every object in given path.
         for entry in scandir(path):
-            #Test if object's name begins with a valid date and is older than difened number of days
+            #Test if object's name begins with a valid date and is older than defined number of days
             if entry.is_dir() and should_delete_folder(entry.name[:10], days):
-                try:
-                    rmtree(entry.path, ignore_errors=False, onerror=delete_readonly_folders)
-                    print("Removed ", entry.path)
-                except OSError as err:
-                    print(err)
-                    exit(2)
+                rmtree(entry.path, ignore_errors=False, onerror=delete_readonly_folders)
+                print("Removed ", entry.path)
     except OSError as err:
         print(err)
         exit(2)
